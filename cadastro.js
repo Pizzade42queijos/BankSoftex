@@ -1,5 +1,5 @@
-const readlineSync = require('readline-sync');
-const axios = require('axios');
+import readlineSync from 'readline-sync';
+import axios from 'axios';
 const userIds = {};
 
 //gera id aleatorio
@@ -86,7 +86,7 @@ function cpfUsuarioExiste(cpf){
 }
 
 //terminal de cadastro
-function tCadastro(){
+export function tCadastro(){
     const nome = String(readlineSync.question(`Area de cadastro de novos clientes
         \nVamos comecar a nos conhecer, por favor digite seu nome:\n`))
 
@@ -111,7 +111,3 @@ if (sanitizedCPF.length !== 11) {
     }
 }
 
-
-module.exports ={
-     tCadastro
-};

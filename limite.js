@@ -1,10 +1,10 @@
-const readlineSync = require('readline-sync');
-const axios = require('axios');
+import readlineSync from 'readline-sync';
+import axios from 'axios'
 
 
 
 
-function credito(id) {
+export function credito(id) {
   const apiUrl = 'http://localhost:3000/users';
   // Carregar dados do arquivo JSON
   axios.get(apiUrl)
@@ -33,7 +33,7 @@ function credito(id) {
 })
 }
 
-function aumentarLimite(id) {
+export function aumentarLimite(id) {
   // Carregar dados do arquivo JSON
   axios.get(apiUrl)
   .then(response => {
@@ -58,8 +58,4 @@ function aumentarLimite(id) {
 })
 }
 
-module.exports = {
-  credito,
-  aumentarLimite
-};
 

@@ -1,15 +1,29 @@
-const axios = require('axios');
-const readlineSync = require('readline-sync');
-const { calcularPorquinho } = require('./porquinho'); 
-const { solicitarEmprestimo } = require('./emprestimo');
-const { solicitarDeposito } = require('./poupanca');
-const { tCadastro } = require('./cadastro');
-const {} = require('./users.json');
-const { transferirLimite } = require('./transferBank');
-const { visSaldo } = require('./visualizarSaldo');
-const { credito, aumentarLimite } = require('./limite')
-const { saque, deposito } = require('./saque.js')
-const {gerarExtrato} = require('./extrato.js')
+//const axios = require('axios');
+import axios from 'axios';
+//const readlineSync = require('readline-sync');
+import readlineSync from 'readline-sync'
+//const { calcularPorquinho } = require('./porquinho'); 
+import { calcularPorquinho } from './porquinho.js';
+//const { solicitarEmprestimo } = require('./emprestimo');
+import { solicitarEmprestimo } from './emprestimo.js';
+//const { solicitarDeposito } = require('./poupanca');
+import { solicitarDeposito } from './poupanca.js';
+//const { tCadastro } = require('./cadastro');
+import { tCadastro } from './cadastro.js';
+//const {} = require('./users.json');
+import {} from './users.json' with {type: "json"};
+//const { transferirLimite } = require('./transferBank');
+import { transferirLimite } from './transferBank.js';
+//const { visSaldo } = require('./visualizarSaldo');
+import { visSaldo } from './visualizarSaldo.js';
+//const { credito, aumentarLimite } = require('./limite')
+import { credito } from './limite.js';
+import { aumentarLimite } from './limite.js';
+//const { saque, deposito } = require('./saque.js')
+import { saque } from './saque.js';
+import { deposito } from './saque.js';
+//const {gerarExtrato} = require('./extrato.js')
+import { gerarExtrato } from './extrato.js';
 let contadorSaques = 0
 let idLogado = ""
 

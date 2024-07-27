@@ -1,6 +1,7 @@
 //Precisa do axios e do json-server para funcionar 
-const readlineSync = require("readline-sync");
-const { default: axios } = require("axios");
+import readlineSync from 'readline-sync';
+//const { default: axios } = require("axios");
+import axios from 'axios';
 
 console.log("Bem vindo a exclusão de usuario\nInfelizmente voce esta nos deixando")
 

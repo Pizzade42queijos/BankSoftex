@@ -1,12 +1,12 @@
-const readlineSync = require('readline-sync');
-const axios = require('axios');
+import readlineSync from 'readline-sync';
+import axios from 'axios';
 
 const apiUrl = 'http://localhost:3000/users';
 const transHistory = 'http://localhost:3000/transactions'
 const axiosConfig = {
   timeout: 5000}
 
-function transferirLimite(id) {
+export function transferirLimite(id) {
     // Carregar dados do arquivo JSON
     axios.get(apiUrl, axiosConfig)
     .then(usersResponse => {
@@ -74,7 +74,3 @@ console.log(`Transferência de R$ ${valor} realizada com sucesso!`);
 
   }
   // transferirLimite('xG31t2YhD9')
-
-  module.exports = {
-    transferirLimite
-};

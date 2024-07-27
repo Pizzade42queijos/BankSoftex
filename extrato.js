@@ -1,10 +1,10 @@
-const axios = require('axios');
+import axios from 'axios';
 
 // Função para formatar o valor com duas casas decimais
 const formatarValor = (valor) => valor.toFixed(2).replace('.', ',');
 
 // Função para gerar o extrato
-const gerarExtrato = async (usuarioId) => {
+export const gerarExtrato = async (usuarioId) => {
   const apiUrl = 'http://localhost:3000'
 
   try {
@@ -65,6 +65,3 @@ Saldo Atual:                      ${formatarValor(usuario.saldo)}
 // gerarExtrato('xG31t2YhD9')
 
 // gerarExtrato('ukIcZpX2c8'); 
-module.exports = {
-  gerarExtrato
-};

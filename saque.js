@@ -1,11 +1,11 @@
-const readlineSync = require('readline-sync');
-const axios = require('axios');
+import readlineSync from 'readline-sync';
+import axios from 'axios';
 
 const apiUrl = 'http://localhost:3000/users';
 const transHistory = 'http://localhost:3000/transactions'
 
 
-function saque(userId){
+export function saque(userId){
     const tipoTransacao = 'saque' 
 
     const valorSaque = Number(readlineSync.question(`Digite o valor que voce deseja sacar: `))
@@ -35,7 +35,7 @@ function saque(userId){
 })
 }
 
-function deposito(userId){
+export function deposito(userId){
     const tipoTransacao = 'deposito' 
 
     const valorDeposito = Number(readlineSync.question(`Digite o valor que voce deseja depositar: `))
@@ -73,9 +73,3 @@ const attTransactions = async (id, tipoTransacao, valor) =>{
     }
     axios.patch(`${transHistory}/${id}`, transacaoUsuario)
 }
-
-
-module.exports = {
-    saque,
-    deposito
-  };

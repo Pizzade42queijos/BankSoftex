@@ -1,8 +1,8 @@
-const axios = require('axios');
+import axios from 'axios';
 
 
 
-function visSaldo(userId){
+export function visSaldo(userId){
   const apiUrl = 'http://localhost:3000/users';
     axios.get(apiUrl)
     .then(response => {
@@ -13,6 +13,3 @@ function visSaldo(userId){
   })
 }
 // visSaldo('xG31t2YhD9')
-module.exports = {
-    visSaldo
-}
